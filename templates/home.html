@@ -10,19 +10,27 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class='img-fluid'id='banner' src="https://0a58f036-b09d-4254-b246-164de5aaf450-00-3sqjsqybd3b0.riker.replit.dev/static/banner.jpeg">
     <div class='container'>
     <h1 class='text-center mt-2 mb-4'>
       {{company_name}} Careers
     </h1>
-    <img class='img-fluid'id='banner' src="https://0a58f036-b09d-4254-b246-164de5aaf450-00-3sqjsqybd3b0.riker.replit.dev/static/banner.jpeg">
-    <h2 class='text-center mt-2 mb-4''>About Simon</h2>
+    <div class='row' style='margin-bottom:16px;'>
+      <div class='col-md-6'>
     <p class='lead'>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
+      </div>
+      <div class='d-none d-md-block col-md-6''>
+      <img src = '/static/people.jpg' style='height:320px; border-radius:4px;'>
+      </div>
+    </div>
     <h2 class='text-center mt-2 mb-4'>
       Open Positions
     </h2>
@@ -31,9 +39,9 @@
       {% include 'jobitem.html' %}
       {% endfor %}
     <div class='text-center'>
-    <button class='btn btn-primary btn-lg'>Contact Us</button>
-      <p class='mt-4'>Copyright 2024, Simon</p>
+    <a href="mailto:hello@jovian.ai?subject=Question%20about%20job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20questions%3A%20%3CEnter%20question%20here%3E" class='btn btn-primary btn-lg'>Contact Us</a>
     </div>
       </div>
+      {% include 'footer.html' %}
   </body>
 </html>
